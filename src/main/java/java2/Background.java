@@ -1,7 +1,7 @@
 package java2;
 import java.util.Random;
 import java.awt.*;
-
+//
 public class Background {
     private static Random rnd = new Random();
     private static Color color;

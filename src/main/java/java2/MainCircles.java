@@ -47,10 +47,10 @@ public class MainCircles extends JFrame implements ActionListener {
         newBalls[oldCount] = new Ball();
         this.balls = newBalls;
         count++;
-        //System.out.println("++ = " + balls.length);
+        System.out.println("++ = " + balls.length);
     }
 
-
+//
     private MainCircles() {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setBounds(POS_X, POS_Y, WINDOW_WIDTH, WINDOW_HEIGHT);

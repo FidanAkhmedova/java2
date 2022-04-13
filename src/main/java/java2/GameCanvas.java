@@ -11,7 +11,7 @@ public class GameCanvas extends JPanel{
     private int counter;
     private JButton deletebtn;
     private JButton addbtn;
-
+//
     GameCanvas(MainCircles controller) {
         lastFrameTime = System.nanoTime();
         this.controller = controller;
@@ -43,7 +43,7 @@ public class GameCanvas extends JPanel{
                        System.arraycopy(MainCircles.balls, 0, newBalls, 0, MainCircles.balls.length - 1);
                        MainCircles.balls = newBalls;
                        MainCircles.count--;
-                       //  System.out.println("-- = " + MainCircles.balls.length);
+                       System.out.println("-- = " + MainCircles.balls.length);
                }
             }
         });

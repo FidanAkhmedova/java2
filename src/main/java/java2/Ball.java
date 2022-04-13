@@ -16,7 +16,7 @@ public class Ball extends Sprite {
         vX = 100f + (float) (Math.random() * 200f);
         vY = 100f + (float) (Math.random() * 200f);
     }
-
+//
     void update(GameCanvas canvas, float deltaTime) {
         x += vX * deltaTime;
         y += vY * deltaTime;

@@ -7,6 +7,7 @@ public class Sprite {
     protected float y;
     protected float halfWidth;
     protected float halfHeight;
+    //
 
     protected float getLeft() {
         return x - halfWidth;
