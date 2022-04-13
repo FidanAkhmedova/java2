@@ -47,7 +47,7 @@ public class MainCircles extends JFrame implements ActionListener {
         newBalls[oldCount] = new Ball();
         this.balls = newBalls;
         count++;
-        //System.out.println("++ = " + balls.length);
+        System.out.println("++ = " + balls.length);
     }
 
 
