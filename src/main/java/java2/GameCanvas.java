@@ -11,7 +11,7 @@ public class GameCanvas extends JPanel{
     private int counter;
     private JButton deletebtn;
     private JButton addbtn;
-
+//
     GameCanvas(MainCircles controller) {
         lastFrameTime = System.nanoTime();
         this.controller = controller;
