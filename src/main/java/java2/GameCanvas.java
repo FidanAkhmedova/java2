@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 public class GameCanvas extends JPanel{
     private long lastFrameTime;
@@ -31,8 +33,42 @@ public class GameCanvas extends JPanel{
 
         this.add(addbtn);
         this.add(deletebtn);
-        ActionListener actionListener = controller;
-        addbtn.addActionListener(actionListener);
+        //ActionListener actionListener = controller;
+        //addbtn.addActionListener(actionListener);
+        addbtn.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                MainCircles.ballsCount ++;
+                int oldCount = MainCircles.balls.length;
+                Ball[] newBalls = new Ball[MainCircles.ballsCount];
+                System.arraycopy(MainCircles.balls, 0, newBalls, 0, MainCircles.balls.length);
+                newBalls[oldCount] = new Ball();
+                MainCircles.balls = newBalls;
+                MainCircles.count++;
+                System.out.println("$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ = " + MainCircles.balls.length);
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+
+            }
+        });
+
         deletebtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

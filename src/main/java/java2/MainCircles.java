@@ -4,7 +4,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class MainCircles extends JFrame implements ActionListener {
+public class MainCircles extends JFrame {
+//public class MainCircles extends JFrame implements ActionListener {
     private static final int POS_X = 280;
     private static final int POS_Y = 100;
     private static final int WINDOW_WIDTH = 800;
@@ -12,7 +13,6 @@ public class MainCircles extends JFrame implements ActionListener {
     protected static int count = 10;
     protected static int ballsCount = 10;
     protected static Ball[] balls = new Ball[ballsCount];
-   // private Ball[] sprites = new Ball[10];
 
     private void update(GameCanvas canvas, float deltaTime, Ball balls[]) {
         for (int i = 0; i < balls.length; i++) {
@@ -38,6 +38,7 @@ public class MainCircles extends JFrame implements ActionListener {
             balls[i] = new Ball();
         }
     }
+/*
     @Override
     public void actionPerformed(ActionEvent e) {
         ballsCount ++;
@@ -48,9 +49,8 @@ public class MainCircles extends JFrame implements ActionListener {
         this.balls = newBalls;
         count++;
         System.out.println("++ = " + balls.length);
-    }
+    }*/
 
-//
     private MainCircles() {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setBounds(POS_X, POS_Y, WINDOW_WIDTH, WINDOW_HEIGHT);
@@ -64,6 +64,9 @@ public class MainCircles extends JFrame implements ActionListener {
 
     public static void main(String[] args) {
         new MainCircles();
+        /*String [][]arr = {{"1", "2", "3", "4"},{"5", "6", "9", "n"}};
+        ExceptionClass.checkArray(arr, 4, 4);
+        System.out.println(ExceptionClass.checkArrayData(arr, 4, 2));*/
 
     }
 
